@@ -1,0 +1,14 @@
+{
+    "name": "laravel/laravel",
+    "type": "project",
+    "description": "The skeleton application for the Laravel framework.",
+    "keywords": ["laravel", "framework"],
+    "license": "MIT",
+    "require-dev": {
+        "squizlabs/php_codesniffer": "3.*"
+    },
+    "scripts": {
+        "phpcs": "phpcs /path/to/directory",
+        "phpcbf": "phpcs /path/to/directory"
+    }
+}
