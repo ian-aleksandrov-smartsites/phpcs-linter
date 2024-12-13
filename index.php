@@ -1,9 +1,5 @@
 <?php
 
-declare(strict_types=1);
+class Index {
 
-namespace Test;
-
-class Index
-{
 }
