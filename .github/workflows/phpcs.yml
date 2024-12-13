@@ -32,12 +32,8 @@ jobs:
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress
 
-    - name: Install PHPCS
-      run: |
-        composer global require "squizlabs/php_codesniffer=*"
-
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
 
     - name: Run phpcs
-      run: composer phpcs --standard=phpcs.xml
+      run: composer phpcs
