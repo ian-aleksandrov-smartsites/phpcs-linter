@@ -36,8 +36,10 @@ jobs:
         run: |
           composer global require "squizlabs/php_codesniffer=*"
 
-      # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
-      # Docs: https://getcomposer.org/doc/articles/scripts.md
-
       - name: Run phpcs
-        run: composer phpcs --standard=phpcs.xml
+        run: ~/.composer/vendor/bin/phpcs --standard=phpcs.xml .
+        
+      - name: Upload PHPCS results (optional)
+        if: failure()
+        run: |
+          ~/.composer/vendor/bin/phpcs --report=summary > phpcs.txt
