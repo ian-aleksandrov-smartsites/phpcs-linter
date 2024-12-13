@@ -38,3 +38,8 @@ jobs:
 
       - name: Run phpcs
         run: ~/.composer/vendor/bin/phpcs --standard=phpcs.xml .
+        
+      - name: Upload PHPCS results (optional)
+        if: failure()
+        run: |
+          ~/.composer/vendor/bin/phpcs --report=summary > phpcs.txt
